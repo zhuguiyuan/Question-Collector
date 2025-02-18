@@ -5,6 +5,11 @@ clean:
 	rm -rf target
 
 clean-database:
-	rm -f ./src/resources/h2/question.mv.db
+	rm -f ./src/resources/h2/*.db
 
-.PHONY: run clean clean-database
+clean-uploads:
+	rm -rf uploads
+
+clean-all: clean clean-database clean-uploads
+
+.PHONY: run clean clean-database clean-uploads clean-all

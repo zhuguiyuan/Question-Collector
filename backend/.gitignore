@@ -34,3 +34,4 @@ build/
 
 ### DataBase ###
 *.db
+/uploads/
