@@ -10,11 +10,14 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OrderColumn;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Table(name = "questions")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -31,5 +34,6 @@ public class Question {
 
     @ElementCollection
     @CollectionTable(name = "question_content", joinColumns = @JoinColumn(name = "question_id"))
+    @OrderColumn(name = "content_order")
     private List<ContentBlock> content; // 存储到 question_content 表
 }
