@@ -20,7 +20,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("null") // React 前端默认端口
+                .allowedOrigins("null") // 本地 HTML 文件
                 .allowedMethods("GET", "POST", "PUT", "DELETE");
     }
 
