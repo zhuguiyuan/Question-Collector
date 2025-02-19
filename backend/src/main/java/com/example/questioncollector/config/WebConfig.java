@@ -8,20 +8,20 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
-    @Value("${file.upload-dir}")
-    private String uploadDir;
+  @Value("${file.upload-dir}")
+  private String uploadDir;
 
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/files/**")
-                .addResourceLocations("file::" + uploadDir + "/");
-    }
+  @Override
+  public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    registry.addResourceHandler("/files/**")
+        .addResourceLocations("file::" + uploadDir + "/");
+  }
 
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedOrigins("null") // 本地 HTML 文件
-                .allowedMethods("GET", "POST", "PUT", "DELETE");
-    }
+  @Override
+  public void addCorsMappings(CorsRegistry registry) {
+    registry.addMapping("/**")
+        .allowedOrigins("null") // 本地 HTML 文件
+        .allowedMethods("GET", "POST", "PUT", "DELETE");
+  }
 
 }

@@ -18,16 +18,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Question {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    private String title;
+  private String title;
 
-    @Lob
-    private String content;
+  @Lob
+  private String content;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User creator;
+  @ManyToOne
+  @JoinColumn(name = "user_id")
+  private User creator;
 }
