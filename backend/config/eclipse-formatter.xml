@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<profiles version="13">
+	<profile kind="CodeFormatterProfile" name="Spotless" version="13">
+		<!-- 每行最大 80 字符 -->
+		<setting id="org.eclipse.jdt.core.formatter.lineSplit" value="80"/>
+		<!-- 缩进使用 2 空格 -->
+		<setting id="org.eclipse.jdt.core.formatter.tabulation.char" value="space"/>
+		<setting id="org.eclipse.jdt.core.formatter.tabulation.size" value="2"/>
+		<setting id="org.eclipse.jdt.core.formatter.indentation.size" value="2"/>
+		<!-- 其他保持 Eclipse 默认样式 -->
+		<setting id="org.eclipse.jdt.core.formatter.comment.line_length" value="80"/>
+		<setting id="org.eclipse.jdt.core.formatter.join_wrapped_lines" value="false"/>
+	</profile>
+</profiles>
