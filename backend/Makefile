@@ -1,6 +1,9 @@
 run: format
 	./mvnw spring-boot:run
 
+test: format
+	./mvnw test
+
 format:
 	./mvnw spotless:apply
 
@@ -15,4 +18,4 @@ clean-uploads:
 
 clean-all: clean clean-database clean-uploads
 
-.PHONY: run format clean clean-database clean-uploads clean-all
+.PHONY: run test format clean clean-database clean-uploads clean-all
