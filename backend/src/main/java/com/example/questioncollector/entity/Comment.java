@@ -2,13 +2,12 @@ package com.example.questioncollector.entity;
 
 import java.util.List;
 
-import jakarta.persistence.CollectionTable;
-import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.Lob;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -29,9 +28,8 @@ public class Comment {
     @JoinColumn(name = "question_id")
     private Question question;
 
-    @ElementCollection
-    @CollectionTable(name = "comment_content", joinColumns = @JoinColumn(name = "comment_id"))
-    private List<ContentBlock> content;
+    @Lob
+    private List<String> content;
 
     @ManyToOne
     private User author;
