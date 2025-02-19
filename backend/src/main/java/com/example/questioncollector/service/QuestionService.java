@@ -13,7 +13,7 @@ public class QuestionService {
 
   public Question createQuestion(User user, String title, String content) {
     Question question = new Question();
-    question.setCreator(user);
+    question.setAuthor(user);
     question.setTitle(title);
     question.setContent(content);
     return questionRepository.save(question);

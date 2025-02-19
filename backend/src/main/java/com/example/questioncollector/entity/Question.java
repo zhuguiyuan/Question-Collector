@@ -29,5 +29,5 @@ public class Question {
 
   @ManyToOne
   @JoinColumn(name = "user_id")
-  private User creator;
+  private User author;
 }

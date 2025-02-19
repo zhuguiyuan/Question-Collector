@@ -31,5 +31,6 @@ public class Comment {
   private List<String> content;
 
   @ManyToOne
+  @JoinColumn(name = "user_id")
   private User author;
 }
