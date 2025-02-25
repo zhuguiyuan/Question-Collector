@@ -1,0 +1,13 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "sprout-power-frontend",
+  "description": "赋芽集前端",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram"
+}
